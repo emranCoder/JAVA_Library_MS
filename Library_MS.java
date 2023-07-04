@@ -7,10 +7,11 @@ Don't forget to use it.
 */
 
 package com.emranCoder;
+
 import java.util.Scanner;
 
 class Library {
-    private String[] books;
+    private final String[] books;
     private int no_of_book = 0;
     private boolean is = true;
     private boolean active = false;
@@ -42,8 +43,7 @@ class Library {
         if (x == 0) {
             this.active = true;
         } else {
-            if (makeYourChoose(x)) makeYourChoose(x);
-            else activeSubPage();
+            makeYourChoose(x);
         }
     }
 
@@ -62,32 +62,27 @@ class Library {
     }
 
     private boolean makeYourChoose(int option) {
-
         switch (option) {
             case 1 -> {
                 addBook(takeInput());
-                activeSubPage();
             }
             case 2 -> {
                 allBooks();
-                activeSubPage();
             }
             case 3 -> {
                 issueBook(takeInput());
-                activeSubPage();
             }
             case 4 -> {
                 returnBook(takeInput());
-                activeSubPage();
             }
             case 5 -> {
                 aboutUS();
-                activeSubPage();
             }
             case 6 -> {
                 is = false;
             }
         }
+        activeSubPage();
         return false;
     }
 
