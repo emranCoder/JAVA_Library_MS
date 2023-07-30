@@ -82,7 +82,7 @@ class Library {
                 is = false;
             }
         }
-        activeSubPage();
+        if(is) activeSubPage();
         return false;
     }
 
