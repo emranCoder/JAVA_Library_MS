@@ -6,7 +6,6 @@ it's created for store your Library data. like books, issueData, returnBooks, al
 Don't forget to use it.
 */
 
-package com.emranCoder;
 
 import java.util.Scanner;
 
